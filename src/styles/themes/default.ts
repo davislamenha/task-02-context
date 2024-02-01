@@ -3,7 +3,7 @@ export const defaultTheme = {
   primary: '#637A9F',
   primary_dark: '#1F2544',
   accent: '#E8C872',
-  accent_ligth: '#FFF3CF',
-  ligth: '#EEEDEB',
+  accent_light: '#FFF3CF',
+  light: '#EEEDEB',
   dark: '#0F0F0F',
 };

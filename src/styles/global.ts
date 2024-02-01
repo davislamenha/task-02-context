@@ -8,9 +8,11 @@ export const GlobalStyle = createGlobalStyle`
   font-family: 'Poppins', sans-serif;
 }
 
-body {  
-  height: 100dvh;
-  height: 100vh;
+#root {
+  min-height: 100vh;
+  position: relative;
+display: flex;
+flex-direction: column;
 }
 
 ul {

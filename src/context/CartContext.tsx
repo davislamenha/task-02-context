@@ -22,8 +22,19 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     .reduce((acc, total) => acc + total, 0);
 
   function addProductToCart(product: CartProduct) {
-    // const alreadyInCart = cartProducts.find(brew => brew.id === product.id)
-    setCartProducts((state) => [...state, product]);
+    const alreadyInCart = cartProducts.find((brew) => brew.id === product.id);
+
+    if (alreadyInCart) {
+      setCartProducts((state) =>
+        state.map((brew) =>
+          brew.id === product.id
+            ? { ...brew, quantity: brew.quantity + product.quantity }
+            : brew,
+        ),
+      );
+    } else {
+      setCartProducts((state) => [...state, product]);
+    }
   }
 
   function removeProductCart(id: number) {

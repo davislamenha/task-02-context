@@ -1,9 +1,10 @@
+import { Container } from '../../styles/global';
 import { FooterContainer } from './styles';
 
 const Footer = () => {
   return (
     <FooterContainer>
-      cervejaria &copy; alguns direitos reservados.
+      <Container>cervejaria &copy; alguns direitos reservados.</Container>
     </FooterContainer>
   );
 };

@@ -19,7 +19,7 @@ export const HeaderContainer = styled.header`
       color: ${(props) => props.theme.accent};
 
       span {
-        color: ${(props) => props.theme.ligth};
+        color: ${(props) => props.theme.light};
         transition: all 0.3s;
       }
 
@@ -44,7 +44,7 @@ export const Navigation = styled.nav`
     font-size: 1.25rem;
 
     a {
-      color: ${(props) => props.theme.ligth};
+      color: ${(props) => props.theme.light};
       margin: 0 -0.25rem;
       padding: 0 0.25rem;
       transition: color 0.3s ease-in-out;

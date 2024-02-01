@@ -3,17 +3,20 @@ import { Outlet } from 'react-router-dom';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import { BrewProvider } from '../../../context/BrewContext';
+import { CartProvider } from '../../../context/CartContext';
 
 function DefaultLayout() {
   return (
     <>
-      <BrewProvider>
-        <Header />
+      <CartProvider>
+        <BrewProvider>
+          <Header />
 
-        <Outlet />
+          <Outlet />
 
-        <Footer />
-      </BrewProvider>
+          <Footer />
+        </BrewProvider>
+      </CartProvider>
     </>
   );
 }

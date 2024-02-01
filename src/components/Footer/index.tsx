@@ -1,5 +1,11 @@
+import { FooterContainer } from './styles';
+
 const Footer = () => {
-  return <footer>FOOTER</footer>;
+  return (
+    <FooterContainer>
+      cervejaria &copy; alguns direitos reservados.
+    </FooterContainer>
+  );
 };
 
 export default Footer;

@@ -20,13 +20,13 @@ const Header = () => {
         <S.Navigation>
           <ul>
             <li>
-              <NavLink to={'/'}>Início</NavLink>
+              <NavLink to="/">Início</NavLink>
             </li>
             <li>
-              <NavLink to={'/produtos'}>Produtos</NavLink>
+              <NavLink to="/produtos">Produtos</NavLink>
             </li>
             <li>
-              <NavLink to={'/checkout'}>
+              <NavLink to="/checkout">
                 <ShoppingCart sx={iconStyles} />
               </NavLink>
             </li>

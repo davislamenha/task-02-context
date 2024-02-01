@@ -15,6 +15,11 @@ display: flex;
 flex-direction: column;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 ul {
   list-style: none;
 }

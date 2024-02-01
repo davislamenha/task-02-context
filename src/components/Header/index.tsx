@@ -26,8 +26,11 @@ const Header = () => {
               <NavLink to="/produtos">Produtos</NavLink>
             </li>
             <li>
-              <NavLink to="/checkout">
-                <ShoppingCart sx={iconStyles} />
+              <NavLink to="/carrinho" aria-label="carrinho de compras">
+                <ShoppingCart
+                  sx={iconStyles}
+                  aria-label="icone de carrinho de compras"
+                />
               </NavLink>
             </li>
           </ul>

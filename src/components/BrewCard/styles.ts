@@ -10,10 +10,6 @@ export const Product = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  form {
-    margin-top: auto;
-  }
 `;
 
 export const Image = styled.img`
@@ -32,6 +28,10 @@ export const Price = styled.span`
   align-items: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+`;
+
+export const ActionContainer = styled.div`
+  margin-top: auto;
 `;
 
 export const QuantityContainer = styled.div`

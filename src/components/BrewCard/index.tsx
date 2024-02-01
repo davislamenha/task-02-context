@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import * as S from './styles';
 import { IBrew } from '../../context/BrewContext';
+import { CartContext } from '../../context/CartContext';
 
 interface BrewCardProps {
   brew: IBrew;
 }
 
 const BrewCard = ({ brew }: BrewCardProps) => {
+  const { addProductToCart } = useContext(CartContext);
   const [brewQuantity, setBrewQuantity] = useState(1);
 
   const incrementQuantity = () => {
@@ -28,7 +30,7 @@ const BrewCard = ({ brew }: BrewCardProps) => {
           currency: 'BRL',
         })}
       </S.Price>
-      <form>
+      <S.ActionContainer>
         <S.QuantityContainer>
           <button type="button" onClick={decrementQuantity}>
             -
@@ -36,7 +38,7 @@ const BrewCard = ({ brew }: BrewCardProps) => {
           <input
             type="number"
             value={brewQuantity}
-            onChange={() => brewQuantity}
+            onChange={(e) => setBrewQuantity(parseInt(e.target.value))}
             aria-label="quantidade"
           />
           <button type="button" onClick={incrementQuantity}>
@@ -44,8 +46,13 @@ const BrewCard = ({ brew }: BrewCardProps) => {
           </button>
         </S.QuantityContainer>
 
-        <S.BuyButton type="submit">Comprar</S.BuyButton>
-      </form>
+        <S.BuyButton
+          type="button"
+          onClick={() => addProductToCart({ ...brew, quantity: brewQuantity })}
+        >
+          Comprar
+        </S.BuyButton>
+      </S.ActionContainer>
     </S.Product>
   );
 };

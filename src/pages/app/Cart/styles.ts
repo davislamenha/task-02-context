@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CartContainer = styled.main`
   background-color: ${(props) => props.theme.primary_light};
   flex: 1;
-  padding: 4rem;
+  padding: 4rem 0;
 
   h1 {
     font-size: 3rem;
@@ -15,6 +15,7 @@ export const CartContainer = styled.main`
 export const CartProductContainer = styled.div`
   div {
     display: grid;
+    gap: 12px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     text-align: center;
@@ -29,6 +30,19 @@ export const CartProductContainer = styled.div`
     padding: 4rem 0;
     text-align: center;
     font-size: 1.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 12px;
+  }
+
+  @media (max-width: 767px) {
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 
@@ -62,6 +76,25 @@ export const CartProduct = styled.div`
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      height: 80px;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 4px;
+      font-size: 1rem;
     }
   }
 `;

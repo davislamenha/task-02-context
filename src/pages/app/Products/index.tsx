@@ -18,7 +18,7 @@ const Products = () => {
         <S.Title>Nossas cervejas</S.Title>
         <S.Subtitle>pra saborear com moderação</S.Subtitle>
         {brewData ? (
-          <S.ProductsContainer>
+          <S.ProductsContainer data-testid="products">
             {brewData.map((brew) => (
               <BrewCard key={brew.id} brew={brew} />
             ))}

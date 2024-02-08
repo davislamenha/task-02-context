@@ -4,7 +4,9 @@ import { FooterContainer } from './styles';
 const Footer = () => {
   return (
     <FooterContainer>
-      <Container>cervejaria &copy; alguns direitos reservados.</Container>
+      <Container data-testid="footer">
+        cervejaria &copy; alguns direitos reservados.
+      </Container>
     </FooterContainer>
   );
 };

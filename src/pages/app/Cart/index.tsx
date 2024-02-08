@@ -53,7 +53,7 @@ const Cart = () => {
         </S.CartProductContainer>
         <S.Summary>
           <p>Total:</p>
-          <span>
+          <span data-testid="total-price">
             {totalPrice.toLocaleString('pt-br', {
               style: 'currency',
               currency: 'BRL',
